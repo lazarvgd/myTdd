@@ -138,7 +138,6 @@ main() {
 
 
       //assert
-//      expect(result, gitRepoContainerDto);
       assert(result != json);
     });
 
@@ -152,11 +151,8 @@ main() {
       //arrange
       var jsonMap = gitRepoContainerDto.toJson();
 
-      //act
-      var expectedMap = json.decode(jsonWithOkData);
-
       //assert
-      expect(jsonMap, expectedMap);
+      expect(json.encode(jsonMap), jsonWithOkData);
     });
   });
 }
