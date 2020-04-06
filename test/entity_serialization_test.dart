@@ -150,9 +150,11 @@ main() {
 
       //arrange
       var jsonMap = gitRepoContainerDto.toJson();
+      var matcher = json.decode(jsonWithOkData);
+      
 
       //assert
-      expect(json.encode(jsonMap), jsonWithOkData);
+      expect(json.encode(jsonMap), json.encode(matcher));
     });
   });
 }
